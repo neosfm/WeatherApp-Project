@@ -4,7 +4,7 @@ html {
 }
 body {
     height: 100vh;
-    background-image: url("/img/sky.png");
+    background-image: url("img/sky.png");
     display: flex;
     justify-content: center;
     align-items: center;
