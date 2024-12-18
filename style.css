@@ -96,6 +96,9 @@ button:hover {
 .hourlyItems {
     margin: 0.5rem;
 }
+.hourlyTemp {
+    margin-top: 0.5rem;
+}
 @media (max-width: 1200px) {
     html {
         font-size: 9px; 

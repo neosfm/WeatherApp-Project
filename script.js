@@ -82,7 +82,7 @@ function getWeather() {
                         <div>${time}</div>
                         <img src="${iconUrl}" alt="${condition}" />
                         <div>${condition}</div>
-                        <div>${temp}</div>
+                        <div class="hourlyTemp">${temp}</div>
                     </div>
                 `;
                 hourlyContainer.appendChild(hourElement);
