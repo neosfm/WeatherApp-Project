@@ -23,7 +23,7 @@ function getWeather() {
     }
 
     const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
-    const forecastUrl = `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1`
+    const forecastUrl = `https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=1`
 
     fetch(apiUrl)
         .then(response => {
