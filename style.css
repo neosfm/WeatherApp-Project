@@ -1,0 +1,118 @@
+html {
+    font-size: 10px;
+    font-family: "Roboto", serif;
+}
+body {
+    height: 100vh;
+    background-image: url("/img/sky.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h1 {
+    font-size: 3.5rem;
+    margin: 1rem;
+}
+.container {
+    width: 28vw;
+    background-color: #85a9c6;
+    text-align: center;
+    border: 3px solid black;
+    padding: 2rem;
+    font-size: 1.8rem;
+    border-radius: 1.5rem;
+}
+input {
+    width: 35%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-top: 1.5rem;
+    padding: 0.3rem;
+    font-size: 1.6rem;
+}
+button {
+    padding: 0.3rem;
+    border-radius: 10px;
+    border: 2px solid black;
+    cursor: pointer;
+    background-color: white;
+    font-size: 1.6rem;
+    font-family: "Roboto", serif;
+    display: block;
+    justify-self: center;
+    margin-top: 1rem;
+}
+button:hover {
+    background-color: lightblue;
+}
+#weatherIcon {
+    width: 15rem;
+    display: none;
+    margin-top: 1rem;
+}
+#temp {
+    font-size: 2.5rem;
+    margin: 1.2rem;
+}
+#loc {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+}
+#weatherIconHourly {
+    width: 10rem;
+    display: none;
+    margin-top: 1rem;
+}
+#weatherInfoHourly {
+    font-size: 2.5rem;
+    margin-top: -2rem;
+}
+#tempHourly {
+    font-size: 2rem;
+    margin: 1.2rem;
+}
+.hourlyContainer {
+    overflow-x: auto;
+    
+}
+.hourlyContainer::-webkit-scrollbar {
+    height: 12px; 
+    background-color: #f1f1f1;
+    border-radius: 6px;
+}
+
+.hourlyContainer::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+.hourlyContainer::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+.hourlyItems {
+    margin: 0.5rem;
+}
+@media (max-width: 1200px) {
+    html {
+        font-size: 9px; 
+    }
+    .container {
+        width: 35vw;
+    }
+    .hourlyItems {
+        margin: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        font-size: 8px;
+    }
+    .container {
+        width: 40vw;
+    }
+}
