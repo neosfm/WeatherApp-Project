@@ -28,13 +28,20 @@ function getWeather() {
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {
-                throw new Error('City not found');
+                weatherInfo.innerHTML = 'City not found.';
+                weatherInfo.style.fontSize = "2rem";
+                weatherInfo.style.marginTop = "3rem";
+                weatherIcon.style.display = "none";
             }
             return response.json();
         })
         .then(data => {
             weatherInfo.style.fontSize = "3rem";
-            weatherInfo.style.marginTop = "-2rem";
+            weatherInfo.style.marginTop = "0";
+            if (window.innerWidth > 1200) {
+                weatherInfo.style.fontSize = "3rem";
+                weatherInfo.style.marginTop = "-2rem";
+            }
             // EXTRACT DATA
             const location = data.location.name + ', ' + data.location.country;
             const temperature = data.current.temp_c + '°C';
@@ -49,20 +56,12 @@ function getWeather() {
             weatherIcon.alt = condition;
             weatherIcon.style.display = "inline";
         })
-        .catch(error => {
-            weatherInfo.innerHTML = `${error.message}`;
-        });
 
         fetch(forecastUrl)
         .then(response => {
-            if (!response.ok) {
-                throw new Error('City not found');
-            }
             return response.json();
         })
         .then(data => {
-            weatherInfo.style.fontSize = "3rem";
-            weatherInfo.style.marginTop = "-2rem";
             
             const hourlyData = data.forecast.forecastday[0].hour.slice(0, 24);
 
@@ -88,7 +87,4 @@ function getWeather() {
                 hourlyContainer.appendChild(hourElement);
             });
         })
-        .catch(error => {
-            hourlyContainer.innerHTML = `${error.message}`;
-        });
 }
